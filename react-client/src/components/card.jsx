@@ -1,70 +1,17 @@
 import React from "react";
 
-function Cards() {
+function PersonnelCard () {
   return (
-    <div className="first-card">
-      <div className="cards">
-        <div className="card active" id="overview">
-          <a className="card-toggle">
-            <i className="fa fa-arrow-circle-left"></i>
-          </a>
-          <div className="card-content">
-            <div className="row">
-              <div className="left col">
-                <h2>
-                  Personal <strong>Social Card</strong>
-                </h2>
-
-                <p>
-                  Click one of the social icons below to switch between card or
-                  click Contact Me link to show the contact form card. <br />
-                  <em>
-                    Make sure you're running this experiment in the latest
-                    Chrome browser.
-                  </em>
-                </p>
-              </div>
-              <div className="right col"></div>
-            </div>
-          </div>
-        </div>
-
-        <div className="card" id="dribbble">
-          <a className="card-toggle">
-            <i>
-              <span className="fa fa-dribbble"></span>
-            </i>
-          </a>
-          <div className="card-content">
-            <div className="row">
-              <div className="left col"></div>
-            </div>
-          </div>
-        </div>
-
-        <div className="card" id="behance">
-          <a className="card-toggle">
-            <i>
-              <span className="fa fa-behance"></span>
-            </i>
-          </a>
-        </div>
-        <div className="card" id="linkedin">
-          <a className="card-toggle">
-            <i>
-              <span className="fa fa-linkedin"></span>
-            </i>
-          </a>
-        </div>
-        <div className="card" id="twitter">
-          <a className="card-toggle">
-            <i>
-              <span className="fa fa-twitter"></span>
-            </i>
-          </a>
-        </div>
+    <div className="personnelCard">
+  
+      <img className="image-profile" src="https://www.diethelmtravel.com/wp-content/uploads/2016/04/bill-gates-wealthiest-person.jpg"/>
+       <div className="personnel-container">
+        <h2 className="title-person">Bill Gates</h2>
+        <p className="s-paragraph-person">full stack javascript developer</p>
+        <p className="x-paragraph-person">hi im jdidi im new one in the feild happy to see you all.start-up called Virtual-Dawn, developing awesome VR games. I'm also responsible for all of my company's web development needs
+My passion is to use technology based solutions, to help solve real world challenges.</p>
       </div>
     </div>
   );
 }
-export default Cards;
+export default PersonnelCard;
