@@ -10,14 +10,15 @@ body {
   position: relative;
   flex: 1;
   max-width: 1000px;
-  height: 300px;
+  height: auto;
+  max-height: 700px;
   margin: 10px;
   border-radius: 20px;
   display: flex;
 }
 @media screen and (min-width: 60em) {
   .personnelCard {
-    height: 200hv; 
+    height: 200hv;
   }
 }
 
@@ -31,23 +32,23 @@ body {
   border-radius: 20px;
 }
 .skills {
-  background-color:white;
+  background-color: white;
   position: relative;
   flex: 1;
   max-width: 495px;
-  height: 400px;
+  height: auto;
   margin: 10px;
   border-radius: 20px;
- 
 }
 .hobbies {
-  background-color: red;
+  background-color: white;
   position: relative;
   flex: 1;
-  max-width: 1000px;
+  max-width: 400px;
+  max-height: 700px;
   height: 300px;
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 .projectCard {
   background-color: red;
@@ -59,13 +60,14 @@ body {
   border-radius: 5px;
 }
 .post {
-  background-color: red;
+  background-color: white;
   position: relative;
   flex: 1;
-  max-width: 1000px;
-  height: 300px;
+  max-width: 600px;
+  height: 600px;
+  max-height: 600px;
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 .tech {
@@ -73,7 +75,8 @@ body {
   position: relative;
   flex: 1;
   max-width: 1000px;
-  height: 300px;
+
+  max-height: 700px;
   margin: 10px;
   border-radius: 5px;
 }
@@ -87,80 +90,71 @@ body {
 .container {
   margin: 20px;
 }
- 
- /* profile card */
- .image-profile{
 
-     float: left;
-     max-width: 300px;
-     height: 260px;
-     margin: 20px 25px;
-     position: relative;
-     z-index: 1;
-     border-radius: 20px;
-  
-  
- } 
- .title-person{
+/* profile card */
+.image-profile {
+  float: left;
+  max-width: 300px;
+  height: 260px;
+  margin: 20px 25px;
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+}
+.title-person {
   font-weight: 500;
-  font-family: 'Montserrat', sans-serif;
-
- }
- .s-paragraph-person{
-  font-family: 'Montserrat', sans-serif;
-  margin-top:-15px;
+  font-family: "Montserrat", sans-serif;
+}
+.s-paragraph-person {
+  font-family: "Montserrat", sans-serif;
+  margin-top: -15px;
   color: grey;
 
   font-size: 15px;
- }
- .personnel-container{
-   margin-top:20px;
- }
- .x-paragraph-person{
-  margin-top: 60px ;
+}
+.personnel-container {
+  margin-top: 20px;
+}
+.x-paragraph-person {
+  margin-top: 60px;
   margin-right: 30px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
   color: grey;
- }
+}
 /* skills */
 
-.skills-container{
-	margin: 61px 20px 0px 50px ;
+.skills-container {
+  margin: 61px 20px 0px 50px;
 }
-.skills-inline{
-
-  margin: 15px 0px 0px 15px ;
-  font-family: 'Montserrat', sans-serif;
+.skills-inline {
+  margin: 15px 0px 0px 15px;
+  font-family: "Montserrat", sans-serif;
   color: grey;
-
 }
-.skills-names{
-  margin: 70px 20px 10px 0px ;
-
+.skills-names {
+  margin: 70px 20px 10px 0px;
 }
-.all-skills{
+.all-skills {
   display: flex;
-  margin: -75px 5px 0px 5px ;
+  margin: -75px 5px 0px 5px;
 }
-.skills-title{
-  margin: 20px 0px 0px 20px ;
-  font-family: 'Montserrat', sans-serif;
+.skills-title {
+  margin: 20px 0px 0px 20px;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
 
   font-size: 20px;
-
 }
 .progress {
-float: left;
-	clear: right;
-	width: 300px;
-  height:10px;
-	margin: 30px 0px 0px 0px ;
-   
-	text-align: left;
-	font-weight: 600;
-  
+  float: left;
+  clear: right;
+  width: 300px;
+  height: 10px;
+  margin: 30px 0px 0px 0px;
+
+  text-align: left;
+  font-weight: 600;
 }
 /* 
 .progress{
@@ -171,10 +165,54 @@ float: left;
 } */
 
 .progress-bar {
-
-	height:10px; 
-  width:10px;
-	border-radius: 5px;
- 
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
 }
 
+/* posts */
+.up-post {
+  display: flex;
+  margin-right: 0px;
+}
+.up-post-layout {
+  margin: 0px;
+}
+.title-post {
+  margin: 20px 0px 0px 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: grey;
+  font-size: 20px;
+}
+.paragraph-post {
+  margin: 20px 0px 0px 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: black;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: 3px;
+}
+.img-post {
+  float: right;
+  max-width: 350px;
+  height: 300px;
+  margin: 0px;
+  margin-right: 0px;
+  margin-top: 50px;
+  position: relative;
+  z-index: 1;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+.down-post {
+  margin: 0px;
+}
+.paragraph-post-down {
+  margin: 60px 50px 40px 40px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  color: grey;
+}
