@@ -3,7 +3,13 @@ import React from "react";
 function Tech () {
   return (
     <div className="tech">
-    <h1>Tech</h1>
+  <p className="teck_title">Projects(2)</p>
+<button className="teck_button">hellloooooo </button>
+<button className="teck_button" >Button</button>
+
+
+
+
     </div>
   );
 }

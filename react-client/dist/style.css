@@ -15,6 +15,7 @@ body {
   margin: 10px;
   border-radius: 20px;
   display: flex;
+  
 }
 @media screen and (min-width: 60em) {
   .personnelCard {
@@ -45,19 +46,23 @@ body {
   position: relative;
   flex: 1;
   max-width: 400px;
-  max-height: 700px;
-  height: 300px;
+  max-height: 1500px;
+  height: 600px;
   margin: 10px;
   border-radius: 20px;
 }
 .projectCard {
-  background-color: red;
+  background-color:white;
   position: relative;
   flex: 1;
-  max-width: 1000px;
-  height: 300px;
+  max-width: 1017px;
+  height: 600px;
   margin: 10px;
-  border-radius: 5px;
+
+  display:flex;
+  flex-direction: row;
+  gap: 58px;
+  flex-wrap: wrap;
 }
 .post {
   background-color: white;
@@ -68,17 +73,18 @@ body {
   max-height: 600px;
   margin: 10px;
   border-radius: 20px;
+
 }
 
 .tech {
-  background-color: red;
+  background-color:white;
   position: relative;
   flex: 1;
-  max-width: 1000px;
+  max-width: 1017px;
 
-  max-height: 700px;
+  height: 100px;
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 .row {
   width: 100%;
@@ -93,7 +99,7 @@ body {
 
 /* profile card */
 .image-profile {
-  float: left;
+  float: right   ;
   max-width: 300px;
   height: 260px;
   margin: 20px 25px;
@@ -210,9 +216,138 @@ body {
   margin: 0px;
 }
 .paragraph-post-down {
-  margin: 60px 50px 40px 40px;
+  margin: 60px 50px 40px 10px;
 
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
   color: grey;
 }
+  
+/* hobbies */
+.hobbies-title{
+  margin: 20px 0px 0px 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color:black;
+  font-size: 30px;
+  
+}
+.hobbies-list{
+margin:0px;
+padding:0px;
+}
+.hobbies-item{
+ margin:20px;
+ padding:0px;
+}
+.hobbies-image{
+
+  width: 360px;
+  height: 150px;
+  
+  margin-right: 0px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  position: relative;
+   z-index: 1;
+   border-radius:10px;
+}
+.hobbies-item-title{
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color:black;
+  font-size: 30px;
+
+}
+.hobbies-item-description{
+
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  color: grey;
+}
+.experience-container{
+  margin:0px;
+  padding:0px
+}
+.experience-item{
+float:left
+  
+}
+.experience-image{
+  float:left;
+  width: 120px;
+  height: 150px;
+  
+  margin-right: 5px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  position: relative;
+   z-index: 1;
+   border-radius:10px;
+} 
+.experience-description{
+  margin:20px 40px 20px 0px;
+}
+.experience-date{
+    font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: grey;
+}
+
+.experience-title{
+  margin: 10px 0px 20px 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+
+  font-size: 15px;
+}
+.experience-paragraph{
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: grey;
+  line-height: 1
+
+
+}
+/* tech */
+.teck_button{
+  margin:0px 10px 10px 20px;
+	position: relative;
+	appearance: none;
+	background: white;
+	padding: 0.3em 1.5em;
+
+	color: black;
+	font-size: 1.2em;
+	cursor: pointer;
+	outline: none;
+	overflow: hidden;
+	border-radius: 100px;
+}
+
+
+.teck_title{
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: grey;
+  margin:7px 0px 5px 20px
+}
+
+/* cards */
+.card_prject{
+  background-color:blue;
+  
+  width: 300px;
+  height: 500px;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1rem;
+  border-radius:10px;
+}
+/* project card */
