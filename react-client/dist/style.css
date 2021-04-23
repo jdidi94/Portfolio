@@ -3,7 +3,7 @@ body {
   padding: 0;
   height: 100hv;
   background-color: rgb(221, 204, 204);
-  justify-content: center;
+  /* justify-content: center; */
 }
 .personnelCard {
   background-color: white;
@@ -90,9 +90,7 @@ body {
   flex-wrap: wrap;
 }
 
-.container {
-  margin: 20px;
-}
+
 
 /* profile card */
 .image-profile {
@@ -416,4 +414,7 @@ body {
 button:hover {
   background-color: #1e90ff; /* Green */
   color: white;
+}
+footer{
+
 }

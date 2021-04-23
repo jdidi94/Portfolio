@@ -8,6 +8,7 @@ import Skills from "./components/skills.jsx";
 import Tech from "./components/tech.jsx";
 import Experience from "./components/experience.jsx";
 
+// import photo from "./components/jdidi.png"
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -27,12 +28,13 @@ class App extends React.Component {
           <Post />
           <Hobbies />
         </div>
-        <div className="row">
-          <Tech />
-        </div>
+
         <div className="row">
           <ProjectCard />
         </div>
+        <footer>
+          <p>created by jdidi daoud-devchallenges.io</p>
+        </footer>
       </div>
     );
   }
