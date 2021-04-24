@@ -1,5 +1,5 @@
 import React from "react";
-
+// import photo from "./jdidi.png"
 function Hobbies () {
   return (
     <div className="hobbies">

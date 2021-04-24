@@ -1,45 +1,68 @@
-import React from "react";
-import useState from "react"
+import React  from "react";
+
+import projects from "./fakedata.jsx";
 
 
+class ProjectCard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state={
+    search:"",
+    project:projects
+    };
+    this.handleSearch = this.handleSearch.bind(this);
+  }
+  handleSearch(val){
 
-function ProjectCard() {
-
-  return (
-     
-      <div>
-              <div className="tech">
-      <p className="teck_title">Projects(2)</p>
-      <button className="teck_button">react </button>
-      <button className="teck_button">CSS</button>
-    </div>
-    <div className="projectCard">
+      // var newArr = []
+      // const hashtag="#"+val
+ 
+      // this.state.project.map((e) => {
+      //   this.setState({search:val})
+   
+      //   if (e.skills.includes(hashtag)) {
+      //   newArr.push(e)
+      //   this.setState({project:newArr})
+      //   }
+      
+      
+      // })
+      
+   
+  }
   
-      <div className="card_prject">
-        <img
-          className="project_img"
-          src="https://image.shutterstock.com/z/stock-photo-responsive-web-design-on-mobile-devices-phone-laptop-and-tablet-pc-288954107.jpg"
-        />
+  render() {
+    const skills = ["React", "Vue", "express", "Node"];
+    const tech = skills.map((tech, i) => (
+      <button   onClick={this.handleSearch(tech)} key={i} className="teck_button">
+        {tech}
+      </button>
+    ));
+    const pro = this.state.project.map((element, i) => (
+      <div key={i} className="card_prject">
+        <img className="project_img" src={element.imageUrl} />
         <div className="tech_its">
-          <h3 className="tech_items_tags">CSS</h3>
-          <h3  className="tech_items_tags">CSS</h3>
-          <h3  className="tech_items_tags">CSS</h3>
+          {element.techs.map((item, i) => (
+            <h3 key={i} className="tech_items_tags">#{item}</h3>
+          ))}
         </div>
-        <h3 className="project_title">Tunisian fann</h3>
-        <p className="project_paragraph">
-          If you’re confused about how to write your meta descriptions, you’re
-          not the only one. To help remove that confusion, I’m going to dig into
-          what makes a great meta
-        </p>
+        <h3 className="project_title">{element.title}</h3>
+        <p className="project_paragraph">{element.description}</p>
         <div className="project_button">
-          <button className="teck_button_relate">Demo </button>
+          <button className="teck_button_relate">Demo</button>
           <button className="teck_button_relate">Code</button>
         </div>
       </div>
-  
-    
+    ));
+    return (
+      <div>
+      <div className="tech">
+        <p className="teck_title">Projects({skills.length})</p>
+        {tech}
+      </div>
+      <div className="projectCard">{pro}</div>
     </div>
-    </div>
-  );
+    );
+  }
 }
 export default ProjectCard;
