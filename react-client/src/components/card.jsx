@@ -1,5 +1,5 @@
 import React from "react";
-import photo from "../../dist/jdidi.png"
+
 
 function PersonnelCard() {
   return (
