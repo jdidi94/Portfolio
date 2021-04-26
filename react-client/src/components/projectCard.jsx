@@ -1,14 +1,21 @@
 import React from "react";
 
 import projects from "./fakedata.jsx";
-
+import Pagination from "./pagination.jsx";
 class ProjectCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       project: projects,
+      loading: false,
+      currentPage: 1,
+      postsPerpage: 3,
     };
     this.handleSearch = this.handleSearch.bind(this);
+    this.paginate = this.paginate.bind(this);
+  }
+  paginate(number){
+    this.setState({currentPage: number})
   }
   componentDidMount() {
     this.handleSearch;
@@ -32,6 +39,7 @@ class ProjectCard extends React.Component {
         {tech}
       </button>
     ));
+
     const pro = this.state.project.map((element, i) => (
       <div key={i} className="card_prject">
         <img className="project_img" src={element.imageUrl} />
@@ -50,43 +58,22 @@ class ProjectCard extends React.Component {
         </div>
       </div>
     ));
+    const inndexOfLastPost = this.state.currentPage * this.state.postsPerpage;
+    const inndexOfFirstpost = inndexOfLastPost - this.state.postsPerpage;
+    const currentPost = pro.slice(inndexOfFirstpost, inndexOfLastPost);
     return (
       <div className="big_container">
         <div className="tech">
           <p className="teck_title">Projects({this.state.project.length})</p>
           {tech}
         </div>
-        <div className="projectCard">{pro}</div>
-        <div className="center">
-          <div className="pagination">
-            <a href="#" className="inactive">
-              0
-            </a>
-            <a href="#" className="active">
-              1
-            </a>
-            <a href="#" className="inactive">
-              2
-            </a>
-            <a href="#" className="inactive">
-              3
-            </a>
-            <a href="#" className="inactive">
-              4
-            </a>
-            <a href="#" className="inactive">
-              5
-            </a>
-            <a href="#" className="inactive">
-              6
-            </a>
-            <a href="#" className="inactive">
-              &raquo;
-            </a>
-          </div>
-        </div>
-      </div>
+        <div className="projectCard">{currentPost}</div>
+        <div className="paginate">
+        <Pagination postsPerPage={this.state.postsPerpage}  totalPosts={projects.length} paginate={this.paginate}/>
       
+        </div>
+      
+      </div>
     );
   }
 }

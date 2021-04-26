@@ -1,81 +1,66 @@
 import React from "react";
 
 function Skills() {
-  return (
-
-    <div className="skills">
-      <div className="skills-title">FRONT END</div>
-      <div className="all-skills">
-      <div className="skills-names">
-        <div className="skills-inline">react</div>
-        <div className="skills-inline">react</div>
-        <div className="skills-inline">react</div>
-        <div className="skills-inline">react</div>
-        <div className="skills-inline">react</div>
-        
-        </div>
-   
-       <div className="skills-container">
-  
-          <div className="progress">
-            <div
-              className="progress-bar"
-              role="progressbar"
-              style={{ width: "11%" }}
-              aria-valuenow="0"
-              aria-valuemin="5"
-              aria-valuemax="100"
-            >
-          </div>
-   
-      </div>
-    
-      <div className="progress">
-        <div
-          className="progress-bar"
-          role="progressbar"
-          style={{ width: "11%" }}
-          aria-valuenow="25"
-          aria-valuemin="0"
-          aria-valuemax="100"
-        ></div>
+  const technologies = [
+    {
+      tech: "React",
+      power: "90%",
+    },
+    {
+      tech: "Vue",
+      power: "90%",
+    },
+    {
+      tech: "Angular",
+      power: "60%",
+    },
+    {
+      tech: "Html/Css",
+      power: "80%",
+    },
+    {
+      tech: "Node.js",
+      power: "90%",
+    },
+    {
+      tech: "Express",
+      power: "90%",
+    },
+    {
+      tech: "Mysql",
+      power: "90%",
+    },
+    {
+      tech: "MongoDB",
+      power: "90%",
+    },
  
-      </div>
-
-      <div className="progress">
-        <div
-          className="progress-bar"
-          role="progressbar"
-          style={{ width: "25%" }}
-          aria-valuenow="50"
-          aria-valuemin="0"
-          aria-valuemax="100"
-        ></div>
-      </div>
-      <div className="progress">
-        <div
-          className="progress-bar"
-          role="progressbar"
-          style={{ width: "25%" }}
-          aria-valuenow="75"
-          aria-valuemin="0"
-          aria-valuemax="100"
-        ></div>
-      </div>
-      <div className="progress">
-        <div
-          className="progress-bar"
-          role="progressbar"
-          style={{ width: "25%" }}
-          aria-valuenow="100"
-          aria-valuemin="0"
-          aria-valuemax="100"
-        ></div>
-      </div>
+  ];
+  const skill = technologies.map((element, i) => (
+    <div key={i} className="skills-inline">
+      {element.tech}
     </div>
+  ));
+  const percentage = technologies.map((element, i) => (
+    <div key={i} className="progress">
+      <div
+        className="progress-bar"
+        role="progressbar"
+        style={{ width: element.power }}
+        aria-valuenow="0"
+        aria-valuemin="5"
+        aria-valuemax="100"
+      ></div>
     </div>
+  ));
+  return (
+    <div className="skills">
+      <div className="skills-title">Skills</div>
+      <div className="all-skills">
+        <div className="skills-names">{skill}</div>
 
-  
+        <div className="skills-container">{percentage}</div>
+      </div>
     </div>
   );
 }

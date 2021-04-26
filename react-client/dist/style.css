@@ -105,6 +105,7 @@ body {
 .title-person {
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
+  font-size: 20px;
 }
 .s-paragraph-person {
   font-family: "Montserrat", sans-serif;
@@ -125,10 +126,11 @@ body {
 }
 .contact_div {
   display: flex;
+  width: 100%;
 }
 .contact_person {
   float: left;
-  margin-left: 300px;
+  margin-left: 250px;
 }
 .div_span {
   display: flex;
@@ -283,10 +285,10 @@ body {
 .experience-image {
   float: left;
   width: 120px;
-  height: 150px;
-
+  height: 120px;
+  margin-left: 5px;
   margin-right: 5px;
-  margin-top: 0px;
+  margin-top: 22px;
   margin-bottom: 5px;
   position: relative;
   z-index: 1;
@@ -367,7 +369,7 @@ body {
   display: flex;
   float: left;
   gap: 10px;
-  margin-top: 10px;
+    margin-top: 10px;
 }
 .tech_items_tags {
   font-family: "Montserrat", sans-serif;
@@ -398,7 +400,7 @@ body {
   margin-top: 30px;
 }
 .teck_button_relate {
-  margin: 50px 10px 10px px;
+ 
   position: relative;
   appearance: none;
   background: white;
@@ -411,33 +413,19 @@ body {
   overflow: hidden;
   border-radius: 100px;
 }
-button:hover {
+button .page-item :hover {
   background-color: #1e90ff; /* Green */
   color: white;
 }
-.center {
-  text-align: center;
-}
-
-.pagination {
-  display: inline-block;
-}
-
-.pagination .inactive {
-  color: black;
-  float: left;
-  padding: 8px 16px;
-  text-decoration: none;
-  transition: background-color .3s;
-  border: 1px solid #ddd;
-  margin: 0 4px;
+/* pagination */
+.page-item{
 
 }
 
-.pagination a.active {
-  background-color: #4CAF50;
-  color: white;
-  border: 1px solid #4CAF50;
+.pagination .pagination-sm{
+
 }
 
-.pagination a:hover:not(.active) {background-color: #ddd;}
+.paginate{
+  float: right;
+}

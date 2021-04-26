@@ -6,16 +6,13 @@ function Post() {
       <div className="up-post">
         <div className="up-post-layout">
           <h5 className="title-post" >blog</h5>
-          <p className="paragraph-post">the coffe in the morning</p>
+          <p className="paragraph-post">The new earth</p>
         </div>
-        <img className="img-post" src="https://www.cancer.org/content/dam/cancer-org/images/photographs/single-use/espresso-coffee-cup-with-beans-on-table-restricted.jpg" />
+        <img className="img-post" src="https://miro.medium.com/max/700/1*_IGyU6qLYRVx4uKKCPVJFg.jpeg" />
       </div>
       <div className="down-post"></div>
       <p className="paragraph-post-down">
-        Mix things up with delicious coffee drinks for any and every
-        occasion — or just because!
-        All you need is a Folgers® coffee recipe and a few simple
-        ingredients to be your own barista.
+      If I have all the technologies in the world, my first and last mission is to find another earth in the universe...<a href="https://jdididaoud404.medium.com/the-new-earth-a9b8f6e28e98" className="meduim">Meduim</a>
       </p>
     </div>
   );
